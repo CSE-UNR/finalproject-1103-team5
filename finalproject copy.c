@@ -53,7 +53,7 @@ void edit_image(int image[size][size], int insize);
 		printf("Choose what change you would like to make:\n1: Crop Image.\n2: Dim or Brighten Image.\n");
 		switch (options2){
 			case 1: 
-				Crop_image(int image[size][size], int *insize);
+				crop_image(int image[size][size], int *insize);
 				break;
 			case 2:
 				dim_brighten_image(int image[size][size], int insize);
@@ -64,3 +64,8 @@ void edit_image(int image[size][size], int insize);
 		}
 		
 	}
+void crop_image(int image[size][size], int *size){
+	int options3;
+	printf("what size do you want the image to be?");
+	scanf("%d", &options3);
+}
