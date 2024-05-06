@@ -19,7 +19,8 @@ void save_image(int image[size][size], int insize);
 
 int main(){
 
-int options, insize = 0, image[size][size] ;
+int options, options2, insize = 0, image[size][size] ;
+space = 0;
 
 do {
 	printf("***AMANDASGRAM***\n");
@@ -45,5 +46,21 @@ do {
 	} while (options != 4);
 	return 0;
 
-	
+
 }
+void edit_image(int image[size][size], int insize);
+	do {
+		printf("Choose what change you would like to make:\n1: Crop Image.\n2: Dim or Brighten Image.\n");
+		switch (options2){
+			case 1: 
+				Crop_image(int image[size][size], int *insize);
+				break;
+			case 2:
+				dim_brighten_image(int image[size][size], int insize);
+				break;
+			default:
+				printf("Invalid options.");
+				break;
+		}
+		
+	}
