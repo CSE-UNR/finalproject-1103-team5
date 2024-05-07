@@ -97,24 +97,11 @@ void load_image(char *filename, int global_Array[MAX_SIZE][MAX_SIZE], int *rows,
     if (numColsTemp > 0) {
         numRows++;
     }
-    if(imageLoaded){
-    clear_image();
-    }
+ 
 
     fclose(file);
 }
 
-void clear_image() {
-   
-    for (int i = 0; i < numRows; i++) {
-        for (int j = 0; j < numCols; j++) {
-            global_Array[i][j] = 0;
-        }
-    }
-    numRows = 0;
-    numCols = 0;
-    imageLoaded = 0;
-}
 
 void display_image(const int global_Array[MAX_SIZE][MAX_SIZE], int rows, int cols){
 
@@ -186,7 +173,7 @@ char save_changes;
         printf("Enter the filename to save the image: ");
         scanf("%s", filename);
         save_image(filename, global_Array, *rows, *cols);
-        clear_image();
+     
     }
 }
 void crop_image(int global_Array[MAX_SIZE][MAX_SIZE], int *rows, int *cols){
